@@ -54,6 +54,8 @@ LRESULT CMainDlg::OnBnClickedButton1(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*
 	// TODO: 在此添加控件通知处理程序代码
 	//m_ComboBoxAudioOutDev.GetCurSel();
 	//m_pRtmpPlayManager = CreateRtmpPlayManager(this);
+	
+	//rtmp://lssplay.aodianyun.com:1935
 
 	//::ShowWindow(GetDlgItem(IDC_STATIC).m_hWnd, SW_SHOW);
 	char szTime[64] = {0};
@@ -76,29 +78,6 @@ LRESULT CMainDlg::OnBnClickedButton1(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*
 	wchar_t buf[100] = {L'0'};
 	GetDlgItem(IDC_EDIT_SERVER).GetWindowText(buf, sizeof(buf));
 	m_strScheduleSvr = ConvertString::ws2s( wstring(buf) );
-	if(m_bDirectConSvr)
-	{
-		if(m_bUseUDP)
-		{
-			m_strScheduleSvr = "rtmpUDP://" + m_strScheduleSvr;
-		}
-		else
-		{
-			m_strScheduleSvr = "rtmp://" + m_strScheduleSvr;
-		}
-		//m_strScheduleSvr = "DirectCon://" + m_strScheduleSvr;
-	}
-	else
-	{
-		if(m_bUseUDP)
-		{
-			m_strScheduleSvr = "httpRtmpUDP://" + m_strScheduleSvr;
-		}
-		else
-		{
-			m_strScheduleSvr = "httpRtmp://" + m_strScheduleSvr;
-		}
-	}
 	GetDlgItem(IDC_EDIT_SITE).GetWindowText(buf, sizeof(buf));
 	m_strPublishSiteInfo = ConvertString::ws2s( wstring(buf) );
 	GetDlgItem(IDC_EDIT_STAGE).GetWindowText(buf, sizeof(buf));
@@ -120,7 +99,6 @@ LRESULT CMainDlg::OnBnClickedButton1(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*
 		m_pRtmpPlayManager->SetClientUserID(m_strUserID.c_str());
 		m_pRtmpPlayManager->StartPlay();
 	}
-
 	return 0;
 }
 
@@ -563,7 +541,7 @@ LRESULT CMainDlg::OnBnClickedButtonBmute(WORD /*wNotifyCode*/, WORD /*wID*/, HWN
 CMainDlg::CMainDlg()
 : m_bOutMute(false)
 , m_iAdOutVolum(80)
-, m_strScheduleSvr("rtmp.aodianyun.com:1936")
+, m_strScheduleSvr("rtmp://lssplay.aodianyun.com:1935")
 , m_strPublishSiteInfo("app")
 , m_strPublishStageInfo("stream")
 , m_strKey("yun")

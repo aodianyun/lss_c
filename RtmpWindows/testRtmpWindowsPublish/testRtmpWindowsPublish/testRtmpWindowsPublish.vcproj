@@ -34,7 +34,7 @@
 				AdditionalDependencies="json_vc71_libmdd.lib AudioVideoPreviewd.lib RtmpPublishManagerd.lib"
 				OutputFile="../../bin/debug/testRtmpWindowsPublishd.exe"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="../../../lib"
+				AdditionalLibraryDirectories="../../../lib;../../../lib/vld"
 				GenerateDebugInformation="TRUE"
 				SubSystem="2"
 				TargetMachine="1"/>

@@ -1,8 +1,10 @@
 #include "stdafx.h"
+//#include "vld/vld.h"
 #include "MainDlg.h"
 #include ".\maindlg.h"
 #include <vector>
 #include <string>
+#include <assert.h>
 using std::vector;
 using std::wstring;
 
@@ -12,7 +14,11 @@ using std::wstring;
 //#include "atlstr.h"
 //using WTL::CString;
 
-
+void CheckOnExit(){
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	int mCount = _CrtDumpMemoryLeaks();
+	assert( mCount == 0);
+}
 void	CMainDlg::Init()
 {
 	m_pRtmpManage = CreateRtmpPublishManager(this);
@@ -75,6 +81,7 @@ void	CMainDlg::Init()
 
 	m_bCapPlayer = false;
 	m_bRestartProcess = true;
+	m_bCaptureBackground = false;
 	////build json
 	//Json::Value root;  
 	//Json::Value arrayObj;  
@@ -170,6 +177,12 @@ void	CMainDlg::Init()
 	swprintf(buf, L"%d", m_iVdBitRate);
 	wstring wstrVdBitRate = buf;
 	memset(buf, 0, sizeof(buf));
+	swprintf(buf, L"%d", m_iBFrame);
+	wstring wstrBframe = buf;
+	memset(buf, 0, sizeof(buf));
+	swprintf(buf, L"%d", m_iQuality);
+	wstring wstrQuality = buf;
+	memset(buf, 0, sizeof(buf));
 	swprintf(buf, L"%d", m_iVdInterval);
 	wstring wstrVdInterval = buf;
 
@@ -191,6 +204,8 @@ void	CMainDlg::Init()
 	GetDlgItem(IDC_EDIT_VIDEOFRAMERATE).SetWindowText(wstrVdFps.c_str());
 	GetDlgItem(IDC_EDIT_VIDEOBITRATE).SetWindowText(wstrVdBitRate.c_str());
 	GetDlgItem(IDC_EDIT_VIDEOKEYFRAMEINTERVAL).SetWindowText(wstrVdInterval.c_str());
+	GetDlgItem(IDC_EDIT_BFRAME).SetWindowText(wstrBframe.c_str());
+	GetDlgItem(IDC_EDIT_QUALITY).SetWindowText(wstrQuality.c_str());
 	
 	GetDlgItem(IDC_EDIT_SAMPLERATE).SetWindowText(wstrAdSampleRate.c_str());
 	GetDlgItem(IDC_EDIT_CHANNELS).SetWindowText(wstrAdChannels.c_str());
@@ -279,7 +294,8 @@ void CMainDlg::Cmd2Json(string &strRetJson, string &strCmd)
 
 void CMainDlg::SetDefaultPara()
 {
-	m_strScheduleSvr = "rtmp.aodianyun.com:1936";
+	 //m_strScheduleSvr = "rtmp.aodianyun.com:1936";
+	 m_strScheduleSvr = "rtmp://rtmp.aodianyun.com:1935";
 	 m_strPublishRoomInfo = "app";
 	 m_strPublishStageInfo = "stream";
 	 m_strUserID = "10000";
@@ -292,6 +308,8 @@ void CMainDlg::SetDefaultPara()
 	 m_iVdHeight = 240;
 	 m_iVdQuality = 80;
 	 m_iVdInterval = 30;
+	 m_iBFrame = 0;
+	 m_iQuality = 0;
 	 
 	 //@ audio para
 	 m_iAdSampleRate = 44100;
@@ -308,32 +326,13 @@ void CMainDlg::SetDefaultPara()
 
 void CMainDlg::GetPublishPara()
 {
+
+
+	//m_srvstr = ip;
+
 	wchar_t buf[100] = {L'0'};
 	GetDlgItem(IDC_EDIT_SERVER).GetWindowText(buf, sizeof(buf));
 	m_strScheduleSvr = ConvertString::ws2s( wstring(buf) );
-	if(m_bDirectConSvr)
-	{
-		if(m_bUseUDP)
-		{
-			m_strScheduleSvr = "rtmpUDP://" + m_strScheduleSvr;
-		}
-		else
-		{
-			m_strScheduleSvr = "rtmp://" + m_strScheduleSvr;
-		}
-		//m_strScheduleSvr = "DirectCon://" + m_strScheduleSvr;
-	}
-	else
-	{
-		if(m_bUseUDP)
-		{
-			m_strScheduleSvr = "httpRtmpUDP://" + m_strScheduleSvr;
-		}
-		else
-		{
-			m_strScheduleSvr = "httpRtmp://" + m_strScheduleSvr;
-		}
-	}
 	GetDlgItem(IDC_EDIT_APP).GetWindowText(buf, sizeof(buf));
 	m_strPublishRoomInfo = ConvertString::ws2s( wstring(buf) );
 	GetDlgItem(IDC_EDIT_STAGEID).GetWindowText(buf, sizeof(buf));
@@ -353,6 +352,11 @@ void CMainDlg::GetPublishPara()
 	m_iVdBitRate = _wtoi(buf) * 1000;
 	GetDlgItem(IDC_EDIT_VIDEOKEYFRAMEINTERVAL).GetWindowText(buf, sizeof(buf));
 	m_iVdInterval = _wtoi(buf);
+	GetDlgItem(IDC_EDIT_BFRAME).GetWindowText(buf,sizeof(buf));
+	m_iBFrame = _wtoi(buf);
+	GetDlgItem(IDC_EDIT_QUALITY).GetWindowText(buf,sizeof(buf));
+	m_iQuality = _wtoi(buf);
+	
 	
 	GetDlgItem(IDC_EDIT_SAMPLERATE).GetWindowText(buf, sizeof(buf));
 	m_iAdSampleRate = _wtoi(buf);
@@ -370,7 +374,7 @@ LRESULT CMainDlg::OnBnClickedButtonStart(WORD /*wNotifyCode*/, WORD /*wID*/, HWN
 	/*m_pRtmpManage->SetCam(m_ComboBoxVideo.GetCurSel());
 	m_pRtmpManage->SetMic(m_ComboBoxAudio.GetCurSel());
 	m_pRtmpManage->StartPublish();*/
-
+	//atexit(CheckOnExit);
 	GetPublishPara();
 	CheckDlgButton(IDC_CHECK_AUTOCTRLBITRATE, BST_UNCHECKED);
 	////build json
@@ -422,6 +426,30 @@ LRESULT CMainDlg::OnBnClickedButtonStart(WORD /*wNotifyCode*/, WORD /*wID*/, HWN
 		m_pRtmpManage->SetMic(m_ComboBoxAudio.GetCurSel());
 		/*m_pRtmpManage->SetCam(-1);
 		m_pRtmpManage->SetMic(-1);*/
+		string strCmd;
+		m_jsonRoot.clear();
+		m_jsonParams.clear();
+		m_jsonRoot["cmd"] = Json::Value("SetBframeCount");
+		m_jsonParams["BframeCount"] = Json::Value(m_iBFrame);
+		m_jsonRoot["params"] = m_jsonParams;
+		strCmd = m_jsonRoot.toStyledString();
+		char* pszRes = new char[1024];
+
+		m_pRtmpManage->CallInJson(strCmd.c_str(),&pszRes);
+		
+		//cqp
+		strCmd.clear();
+		m_jsonRoot.clear();
+		m_jsonParams.clear();
+		memset(pszRes,0,1024);
+		m_jsonRoot["cmd"] = Json::Value("SetVBRQuality");
+		m_jsonParams["Quality"] = Json::Value(m_iQuality);
+		m_jsonRoot["params"] = m_jsonParams;
+		strCmd = m_jsonRoot.toStyledString();
+
+		m_pRtmpManage->CallInJson(strCmd.c_str(),&pszRes);
+
+
 		m_pRtmpManage->SetPublishAudioPara(m_iAdSampleRate, m_iAdChannels, m_iAdBitPerSample, m_iAdBitRate, m_iAdVolum, m_bAdMute);
 		m_pRtmpManage->SetPublishVideoPara(m_iVdWidth, m_iVdHeight, m_iVdFps, m_iVdBitRate, GetDlgItem(IDC_STATIC_DISPLAY_PUBLISH).m_hWnd, m_iVdInterval);
 		string strApp = m_strPublishRoomInfo+"?"+m_strKey;
@@ -1321,6 +1349,44 @@ void CMainDlg::SetAutoCtrlBitrate(bool bAuto)
 
 		root["cmd"] = Json::Value("SetAutoCtrlBitrate");
 		params["bAuto"] = Json::Value(bAuto);
+		root["params"] = params;
+		strCmd = root.toStyledString();
+
+		if (m_pRtmpManage)
+		{
+			m_pRtmpManage->CallInJson(strCmd.c_str(), &pszRes);
+		}
+
+		if (reader.parse(string(pszRes), resRoot))
+		{
+			int iCode = resRoot["code"].asInt();
+
+			if (0 == iCode)
+			{
+				Json::Value data = resRoot["data"];
+			}
+		}
+	}
+}
+
+
+void CMainDlg::EnableBackgroundPlayer(bool bBackground)
+{
+	string strCmd;
+	string strSdkVersion;
+	Json::Value root;
+	Json::Value params;
+	Json::Reader reader;
+	Json::Value resRoot;
+	Json::Value data;
+	char* pszRes = new char[1024];
+
+	if (pszRes)
+	{
+		memset(pszRes, 0, 1024);
+
+		root["cmd"] = Json::Value("StartBackground");
+		params["bBackground"] = Json::Value(bBackground);
 		root["params"] = params;
 		strCmd = root.toStyledString();
 

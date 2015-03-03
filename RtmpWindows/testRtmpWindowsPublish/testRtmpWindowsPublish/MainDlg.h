@@ -68,6 +68,7 @@ public:
 		COMMAND_HANDLER(IDC_BUTTON_SHOWSPM, BN_CLICKED, OnBnClickedButtonShowSpectrum)
 		MESSAGE_HANDLER(MSG_SHOW_AUDIO_SPECTRUM, OnShowSpectrum) 
 		COMMAND_HANDLER(IDC_CHECK_AUTOCTRLBITRATE, BN_CLICKED, OnBnClickedCheckAutoctrlbitrate)
+		//COMMAND_HANDLER(IDC_BUTTON3, BN_CLICKED, OnBnClickedButton3)
 	END_MSG_MAP()
 
 // Handler prototypes (uncomment arguments if needed):
@@ -185,6 +186,8 @@ private:
 	 int		m_iVdHeight;
 	 int		m_iVdQuality;
 	 int		m_iVdInterval;
+	 int		m_iBFrame;
+	 int		m_iQuality;
 	 
 	 //@ audio para
 	 int		m_iAdSampleRate;
@@ -227,6 +230,9 @@ public:
 	LRESULT OnBnClickedButton2(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 	LRESULT OnShowSpectrum(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 
+	//wasapi
+	bool						m_bCaptureBackground;
+	void						EnableBackgroundPlayer(bool bBackground);
 	bool						m_bCapPlayer;
 	bool						m_bRestartProcess;
 	LRESULT OnBnClickedButtonIsrestartProcess(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);

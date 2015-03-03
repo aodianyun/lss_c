@@ -21,7 +21,10 @@
 #define IDC_EDIT_BITPERSAMPLE           1012
 #define IDC_EDIT_AUDIOBITRATE           1013
 #define IDC_BUTTON_START                1014
+#define IDC_EDIT_BFRAME                 1015
 #define IDC_EDIT_MSG                    1016
+#define IDC_EDIT_VIDEOHEIGHT2           1016
+#define IDC_EDIT_QUALITY                1016
 #define IDC_BUTTON1                     1017
 #define IDC_SLIDER_VOLUM                1018
 #define IDC_STATIC_DISPLAY_PUBLISH      1019
@@ -54,6 +57,8 @@
 #define IDC_SLIDER_SHOWSPECTRUM         1046
 #define IDC_CHECK1                      1047
 #define IDC_CHECK_AUTOCTRLBITRATE       1047
+#define IDC_STATIC_BFRAME               1049
+#define IDC_STATIC_QUALITY              1050
 
 // Next default values for new objects
 // 
@@ -61,7 +66,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        201
 #define _APS_NEXT_COMMAND_VALUE         32772
-#define _APS_NEXT_CONTROL_VALUE         1048
+#define _APS_NEXT_CONTROL_VALUE         1051
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
