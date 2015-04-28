@@ -5,6 +5,8 @@
 #define IDD_ABOUTBOX                    100
 #define IDR_MAINFRAME                   128
 #define IDD_MAINDLG                     129
+#define IDD_DIALOG1                     201
+#define IDD_DIALOG_TEST                 201
 #define IDC_BUTTON_STOP                 1000
 #define IDC_COMBO_VIDEO                 1001
 #define IDC_COMBO2                      1002
@@ -23,7 +25,6 @@
 #define IDC_BUTTON_START                1014
 #define IDC_EDIT_BFRAME                 1015
 #define IDC_EDIT_MSG                    1016
-#define IDC_EDIT_VIDEOHEIGHT2           1016
 #define IDC_EDIT_QUALITY                1016
 #define IDC_BUTTON1                     1017
 #define IDC_SLIDER_VOLUM                1018
@@ -64,7 +65,7 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        201
+#define _APS_NEXT_RESOURCE_VALUE        202
 #define _APS_NEXT_COMMAND_VALUE         32772
 #define _APS_NEXT_CONTROL_VALUE         1051
 #define _APS_NEXT_SYMED_VALUE           101
