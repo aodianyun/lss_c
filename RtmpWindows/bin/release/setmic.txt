@@ -1,0 +1,5 @@
+¦KÎ (Realtek High Definition Au
+Kkyoo Audio Source
+ËSð÷ó (Realtek High Definition 
+SetMic:0,
+CreateAudioCapture:Âó¿Ë·ç (Realtek High Definition Au->0
