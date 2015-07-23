@@ -1,1 +1,0 @@
-pServer:rtmp://rtmp.aodianyun.com:1935,pApp:demo?yun,pStream:stream

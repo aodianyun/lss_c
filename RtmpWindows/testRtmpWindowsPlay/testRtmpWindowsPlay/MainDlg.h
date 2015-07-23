@@ -13,6 +13,8 @@ using std::vector;
 #include "RtmpPlayManager/IRtmpPlayManager.h"
 #include "ConvertString.h"
 #include "jsonPraser/json.h"
+#include "CrashCatch.h"
+
 
 #define				MSG_SHOWMSG								WM_USER+100
 #define				MSG_SHOW_PUBLISH_NETINFO				WM_USER+101
@@ -63,6 +65,7 @@ public:
 		COMMAND_HANDLER(IDC_BUTTON_ENABLE_RECORD, BN_CLICKED, OnBnClickedButtonRecord)
 		MESSAGE_HANDLER(MSG_SHOW_AUDIO_SPECTRUM, OnShowSpectrum) 
 		COMMAND_HANDLER(IDC_BUTTON_SET_BUFFER_TIME, BN_CLICKED, OnBnClickedButtonSetBufferTime)
+		COMMAND_HANDLER(IDC_BUTTON_TEST, BN_CLICKED, OnBnClickedButtonTest)
 	END_MSG_MAP()
 
 // Handler prototypes (uncomment arguments if needed):
@@ -101,13 +104,23 @@ public:
 		m_sliderOutVolum.SetPos(80);
 		m_sliderShowSpectrum.Attach(GetDlgItem(IDC_SLIDER_ShowSpectrum).m_hWnd);
 
+		Init_CrashCatch();
 		//@ Show default config
 		GetDlgItem(IDC_EDIT_SERVER).SetWindowText(ConvertString::s2ws(m_strScheduleSvr).c_str());
 		GetDlgItem(IDC_EDIT_SITE).SetWindowText(ConvertString::s2ws(m_strPublishSiteInfo).c_str());
 		GetDlgItem(IDC_EDIT_STAGE).SetWindowText(ConvertString::s2ws(m_strPublishStageInfo).c_str());
 		GetDlgItem(IDC_EDIT_USERID).SetWindowText(ConvertString::s2ws(m_strUserID).c_str());
 		GetDlgItem(IDC_EDIT_KEY).SetWindowText(ConvertString::s2ws(m_strKey).c_str());
-
+		
+		wstring wstrTmp;
+		TCHAR tbuf[128] = L"0";
+		wsprintf(tbuf,L"%i",m_iTimes);
+		wstrTmp = tbuf;
+		GetDlgItem(IDC_EDIT_TIMES).SetWindowText(wstrTmp.c_str());
+		memset(tbuf,0,sizeof(tbuf));
+		wsprintf(tbuf,L"%i",m_iDelay);
+		wstrTmp = tbuf;	
+		GetDlgItem(IDC_EDIT_DELAY).SetWindowText(wstrTmp.c_str());
 		//UIAddChildWindowContainer(m_hWnd);
 		wchar_t** ppAdOutDev = NULL;
 		unsigned int size = 0;
@@ -129,7 +142,8 @@ public:
 		{	strSdkVersion = "SdkVer:get failed.";	}
 		else
 		{	strSdkVersion = "SdkVer:" + strSdkVersion;	}
-
+		wstring wstrtmp = ConvertString::s2ws(strSdkVersion);
+		SetWindowText(wstrtmp.c_str());
 		ShowMsg(strSdkVersion);
 		m_ComboBoxAudioOutDev.SetCurSel(0);
 
@@ -163,6 +177,12 @@ public:
 
 	void CloseDialog(int nVal)
 	{
+		if(m_hThread)
+		{
+			m_bBreak = !m_bBreak;
+			WaitForSingleObject(m_hThread,INFINITE);
+			CloseHandle(m_hThread);
+		}
 		DestroyWindow();
 		::PostQuitMessage(nVal);
 	}
@@ -218,6 +238,21 @@ public:
 	unsigned long								m_lLastTime;
 	long								m_lPingSum;
 	long								m_lTimes;
+	int									m_dwTotalTimesBeforeShow;
+	int									m_dwDnsResolveTime;
+	int									m_dwTcpConnectTime;
+	int									m_dwRtmpInitTime;
+	int									m_uSendRtmpTimes;
+	int									m_uTimeToFirstBuffer;
+	int									m_dwTotalBufEmptyTimes;
+	int									m_dwReceiveFirstDataTime;
+	DWORD								m_dwButtonStart;
+	int									m_iTimes;
+	int									m_iDelay;
+	bool								m_bBreak;
+	HANDLE								m_hThread;
+	static DWORD WINAPI TestFun(LPVOID arg);
+	void DoTestMain();
 	LRESULT OnBnClickedButtonCopymsg(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 	LRESULT OnBnClickedButtonChangeSize(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 	LRESULT OnShowSpectrum(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
@@ -231,4 +266,5 @@ public:
 	bool								m_bUseUDP;
 	CTrackBarCtrl						m_sliderShowSpectrum;
 	LRESULT OnBnClickedButtonSetBufferTime(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
+	LRESULT OnBnClickedButtonTest(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 };

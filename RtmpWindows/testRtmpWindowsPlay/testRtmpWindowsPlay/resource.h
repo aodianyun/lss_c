@@ -32,6 +32,7 @@
 #define IDC_BUTTON_ISDIRECTCON          1024
 #define IDC_BUTTON4                     1025
 #define IDC_BUTTON_UDP                  1025
+#define IDC_BUTTON_TEST                 1026
 #define IDC_SLIDER2                     1027
 #define IDC_SLIDER_ShowSpectrum         1027
 #define IDC_EDIT_dwDatalenOffset        1028
@@ -39,6 +40,9 @@
 #define IDC_EDIT5                       1030
 #define IDC_EDIT_dwTimeCheckSynbuf      1030
 #define IDC_BUTTON_SET_BUFFER_TIME      1031
+#define IDC_EDIT_TIMES                  1032
+#define IDC_EDIT4                       1033
+#define IDC_EDIT_DELAY                  1033
 
 // Next default values for new objects
 // 
@@ -46,7 +50,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        203
 #define _APS_NEXT_COMMAND_VALUE         32772
-#define _APS_NEXT_CONTROL_VALUE         1032
+#define _APS_NEXT_CONTROL_VALUE         1033
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

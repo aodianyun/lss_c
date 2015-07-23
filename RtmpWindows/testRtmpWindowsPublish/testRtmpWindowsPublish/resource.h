@@ -5,8 +5,6 @@
 #define IDD_ABOUTBOX                    100
 #define IDR_MAINFRAME                   128
 #define IDD_MAINDLG                     129
-#define IDD_DIALOG1                     201
-#define IDD_DIALOG_TEST                 201
 #define IDC_BUTTON_STOP                 1000
 #define IDC_COMBO_VIDEO                 1001
 #define IDC_COMBO2                      1002
@@ -60,6 +58,10 @@
 #define IDC_CHECK_AUTOCTRLBITRATE       1047
 #define IDC_STATIC_BFRAME               1049
 #define IDC_STATIC_QUALITY              1050
+#define IDC_BUTTON_TEST                 1051
+#define IDC_EDIT_TIMES                  1052
+#define IDC_EDIT6                       1055
+#define IDC_EDIT_DELAY                  1057
 
 // Next default values for new objects
 // 
@@ -67,7 +69,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        202
 #define _APS_NEXT_COMMAND_VALUE         32772
-#define _APS_NEXT_CONTROL_VALUE         1051
+#define _APS_NEXT_CONTROL_VALUE         1053
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

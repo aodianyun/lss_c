@@ -69,6 +69,7 @@ public:
 		MESSAGE_HANDLER(MSG_SHOW_AUDIO_SPECTRUM, OnShowSpectrum) 
 		COMMAND_HANDLER(IDC_CHECK_AUTOCTRLBITRATE, BN_CLICKED, OnBnClickedCheckAutoctrlbitrate)
 		//COMMAND_HANDLER(IDC_BUTTON3, BN_CLICKED, OnBnClickedButton3)
+		COMMAND_HANDLER(IDC_BUTTON_TEST, BN_CLICKED, OnBnClickedButtonTest)
 	END_MSG_MAP()
 
 // Handler prototypes (uncomment arguments if needed):
@@ -132,6 +133,13 @@ public:
 
 	void CloseDialog(int nVal)
 	{
+		if(m_hThread)
+		{
+			m_bBreak = !m_bBreak;
+			WaitForSingleObject(m_hThread,INFINITE);
+			CloseHandle(m_hThread);
+		}
+
 		DestroyWindow();
 		::PostQuitMessage(nVal);
 	}
@@ -198,6 +206,13 @@ private:
 	 bool		m_bAdMute;
 	 bool		m_bShowSpectrum;
 
+	 // test para
+	 int		m_iTimes;
+	 int		m_iDelay;
+	 bool		m_bBreak;
+	 HANDLE		m_hThread;
+	 static DWORD WINAPI TestFun(LPVOID arg);
+	 void DoTestMain();
 	 //
 	 /*CEdit										m_MsgList;*/
 	 CListBox										m_MsgList;
@@ -260,4 +275,5 @@ public:
 	IAudioVideoPreview*									m_pAudioVideoPreview;
 	LRESULT OnBnClickedButtonShowSpectrum(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 	LRESULT OnBnClickedCheckAutoctrlbitrate(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
+	LRESULT OnBnClickedButtonTest(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/);
 };

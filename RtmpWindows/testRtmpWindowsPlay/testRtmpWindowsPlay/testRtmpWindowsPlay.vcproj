@@ -31,7 +31,7 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="RtmpPlayManagerd.lib json_vc71_libmdd.lib"
+				AdditionalDependencies="RtmpPlayManagerd.lib json_vc71_libmdd.lib crashcatchd.lib"
 				OutputFile="../../bin/debug/testRtmpWindowsPlayd.exe"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="../../../lib"
@@ -92,7 +92,7 @@
 				Name="VCCustomBuildTool"/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="RtmpPlayManager.lib json_vc71_libmd.lib"
+				AdditionalDependencies="RtmpPlayManager.lib json_vc71_libmd.lib crashcatch.lib"
 				OutputFile="../../bin/release/testRtmpWindowsPlay.exe"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="../../../lib"

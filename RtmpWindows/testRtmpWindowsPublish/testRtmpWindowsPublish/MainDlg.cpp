@@ -28,7 +28,7 @@ void	CMainDlg::Init()
 	{	strSdkVersion = "SdkVer:get failed.";	}
 	else
 	{	strSdkVersion = "SdkVer:" + strSdkVersion;	}
-
+	SetWindowText((ConvertString::s2ws(strSdkVersion)).c_str())	;
 	ShowMsg(strSdkVersion);
 	wchar_t** ppCam = NULL;
 	unsigned int size = 0;
@@ -199,6 +199,15 @@ void	CMainDlg::Init()
 	swprintf(buf, L"%d", m_iAdBitPerSample);
 	wstring wstrAdBitperSample = buf;
 
+	// test para
+	memset(buf, 0, sizeof(buf));
+	swprintf(buf, L"%d", m_iTimes);
+	wstring wstrtimes = buf;
+	memset(buf, 0, sizeof(buf));
+	swprintf(buf, L"%d", m_iDelay);
+	wstring wstrdelay = buf;
+
+
 	GetDlgItem(IDC_EDIT_VIDEOWIDTH).SetWindowText(wstrWidth.c_str());
 	GetDlgItem(IDC_EDIT_VIDEOHEIGHT).SetWindowText(wstrHeight.c_str());
 	GetDlgItem(IDC_EDIT_VIDEOFRAMERATE).SetWindowText(wstrVdFps.c_str());
@@ -211,6 +220,9 @@ void	CMainDlg::Init()
 	GetDlgItem(IDC_EDIT_CHANNELS).SetWindowText(wstrAdChannels.c_str());
 	GetDlgItem(IDC_EDIT_BITPERSAMPLE).SetWindowText(wstrAdBitperSample.c_str());
 	GetDlgItem(IDC_EDIT_AUDIOBITRATE).SetWindowText(wstrAdBitRate.c_str());
+
+	GetDlgItem(IDC_EDIT_TIMES).SetWindowText(wstrtimes.c_str());
+	GetDlgItem(IDC_EDIT_DELAY).SetWindowText(wstrdelay.c_str());
 
 	m_ComboBoxAudio.SetCurSel(0);
 	m_ComboBoxVideo.SetCurSel(0);
@@ -322,6 +334,12 @@ void CMainDlg::SetDefaultPara()
 
 	 m_bOtherPlayerMute = false;
 	 m_iOtherPlayerVolum = 80;
+
+	 // test para
+	 m_iTimes = 300;
+	 m_iDelay = 3;
+	 m_bBreak = false;
+	 m_hThread = NULL;
 }
 
 void CMainDlg::GetPublishPara()
@@ -366,6 +384,11 @@ void CMainDlg::GetPublishPara()
 	m_iAdBitPerSample = _wtoi(buf);
 	GetDlgItem(IDC_EDIT_AUDIOBITRATE).GetWindowText(buf, sizeof(buf));
 	m_iAdBitRate = _wtoi(buf) * 1000;
+
+	GetDlgItem(IDC_EDIT_TIMES).GetWindowText(buf, sizeof(buf));
+	m_iTimes = _wtoi(buf);
+	GetDlgItem(IDC_EDIT_DELAY).GetWindowText(buf, sizeof(buf));
+	m_iDelay = _wtoi(buf);
 
 }
 LRESULT CMainDlg::OnBnClickedButtonStart(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
@@ -1404,5 +1427,41 @@ void CMainDlg::EnableBackgroundPlayer(bool bBackground)
 				Json::Value data = resRoot["data"];
 			}
 		}
+	}
+}
+LRESULT CMainDlg::OnBnClickedButtonTest(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
+{
+	// TODO: 在此添加控件通知处理程序代码
+	m_bBreak = !m_bBreak;
+	WaitForSingleObject(m_hThread,INFINITE);
+	CloseHandle(m_hThread);
+	//m_hThread =(HANDLE)_beginthread(TestFun, 0, (void *)this);
+
+	m_hThread = ::CreateThread(NULL,0,TestFun,this,0,0);
+
+	return 0;
+}
+
+DWORD WINAPI CMainDlg::TestFun(LPVOID arg)
+{
+
+	CMainDlg *p = (CMainDlg *)arg;
+	p->DoTestMain();
+	return 1;
+}
+
+void CMainDlg::DoTestMain()
+{
+	wchar_t buf[30]={L'\0'};
+	for (int i = 0; (i< m_iTimes) && m_bBreak;i++)
+	{
+		::PostMessage(GetDlgItem(IDC_BUTTON_START).m_hWnd,BM_CLICK,0,0);
+		Sleep(m_iDelay*1000);
+		::PostMessage(GetDlgItem(IDC_BUTTON_STOP).m_hWnd,BM_CLICK,0,0);
+		Sleep(1000);
+		swprintf(buf, L"%d", m_iTimes - i);
+		wstring reTimes = buf;
+		//GetDlgItem(IDC_EDIT_TIMES).SetWindowText(reTimes.c_str());
+		::PostMessage(GetDlgItem(IDC_EDIT_TIMES).m_hWnd,WM_SETTEXT,0,(LPARAM)(reTimes.c_str()));
 	}
 }

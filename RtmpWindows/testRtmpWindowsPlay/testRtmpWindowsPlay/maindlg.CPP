@@ -59,19 +59,26 @@ LRESULT CMainDlg::OnBnClickedButton1(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*
 
 	//::ShowWindow(GetDlgItem(IDC_STATIC).m_hWnd, SW_SHOW);
 	char szTime[64] = {0};
-	time_t curTime;
-	time(&curTime);
-	tm *pTime = NULL;
-	pTime = localtime(&curTime);
+	//time_t curTime;
+	//time(&curTime);
+	//tm *pTime = NULL;
+	//pTime = localtime(&curTime);
 
-	if (pTime)
-	{
-		sprintf(szTime,
-			"%d:%d:%d.000 ",
-			pTime->tm_hour,
-			pTime->tm_min,
-			pTime->tm_sec);
-	}
+	//if (pTime)
+	//{
+	//	sprintf(szTime,
+	//		"%d:%d:%d.000 ",
+	//		pTime->tm_hour,
+	//		pTime->tm_min,
+	//		pTime->tm_sec);
+	//}
+
+	SYSTEMTIME st;
+	GetLocalTime(&st);
+	m_dwButtonStart = GetTickCount();
+	sprintf(szTime,"%d:%d:%d.%d ",st.wHour,st.wMinute,st.wSecond,st.wMilliseconds);
+
+
 	string strMsg = string(szTime) + "ClickStartButton";
 	ShowMsg(strMsg);
 
@@ -86,6 +93,10 @@ LRESULT CMainDlg::OnBnClickedButton1(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*
 	m_strUserID = ConvertString::ws2s( wstring(buf) );
 	GetDlgItem(IDC_EDIT_KEY).GetWindowText(buf, sizeof(buf));
 	m_strKey = ConvertString::ws2s( wstring(buf) );
+	if (!m_pRtmpPlayManager)
+	{
+		m_pRtmpPlayManager = CreateRtmpPlayManager(this);
+	}
 
 	if(m_pRtmpPlayManager)
 	{
@@ -245,6 +256,17 @@ bool CMainDlg::ParseCmd(const string &strCmd)
 					char* pParam = new char[sizeof(int)];	/* pParam will be free in msg function. */
 					itoa(uPercent, pParam, 10);
 					PostMessage(MSG_SHOW_AUDIO_SPECTRUM, 0, (LPARAM)pParam);
+					return true;
+				}else if (strApi == "OnRtmpPlayManagerPlayQualityAdd")
+				{
+					m_dwTotalTimesBeforeShow = objParams["uTotalTimesBeforeShow"].asInt();
+					m_dwDnsResolveTime = objParams["uDnsResolveTime"].asInt();
+					m_dwTcpConnectTime = objParams["uTcpConnectTime"].asInt();
+					m_dwRtmpInitTime = objParams["uRtmpInitTime"].asInt();
+					m_uSendRtmpTimes= objParams["uSendRtmpTimes"].asInt();
+					m_uTimeToFirstBuffer = objParams["uTimeToFirstBuffer"].asInt();
+					m_dwTotalBufEmptyTimes = objParams["uTotalBufEmptyTimes"].asInt();
+					m_dwReceiveFirstDataTime = objParams["uReceiveFirstDataTime"].asInt();
 					return true;
 				}
 			}
@@ -438,7 +460,8 @@ bool CMainDlg::OnRtmpPlayManagerPlayQuality(RtmpPlayQuality &RtmpPlayQuality)
 {
 	//@ Risk to memory over-boundary
 		char buf[500]={0};
-		sprintf(buf, "%d ms", RtmpPlayQuality.uShowVideoSucTime);
+		//sprintf(buf, "%d ms", RtmpPlayQuality.uShowVideoSucTime);废弃,采用新的 算法
+		sprintf(buf, "%d.ms",m_dwReceiveFirstDataTime - m_dwButtonStart);
 		string strPlayQuality = string("显示视频花费时间:")+string(buf)+"\r\n";
 		memset(buf, 0, sizeof(buf));
 		sprintf(buf, "%d (次)", RtmpPlayQuality.uBufferEmptyCount);
@@ -459,6 +482,28 @@ bool CMainDlg::OnRtmpPlayManagerPlayQuality(RtmpPlayQuality &RtmpPlayQuality)
 		sprintf(buf, "%.2f (s)", RtmpPlayQuality.fTotalPlayTime);
 		strPlayQuality+= string("总播放时间:")+string(buf)+"\r\n";
 			
+
+		memset(buf, 0, sizeof(buf));
+		sprintf(buf, "%d (ms)", m_dwTotalTimesBeforeShow);
+		strPlayQuality+= string("显示视频时间:")+string(buf)+"\r\n";
+		memset(buf, 0, sizeof(buf));
+		sprintf(buf, "%d (ms)", m_dwDnsResolveTime);
+		strPlayQuality+= string("DNS解析时间:")+string(buf)+"\r\n";
+		memset(buf, 0, sizeof(buf));
+		sprintf(buf, "%d (ms)", m_dwTcpConnectTime);
+		strPlayQuality+= string("TCP连接时间:")+string(buf)+"\r\n";
+		memset(buf, 0, sizeof(buf));
+		sprintf(buf, "%d (ms)", m_dwRtmpInitTime);
+		strPlayQuality+= string("RTMP初始化时间:")+string(buf)+"\r\n";
+		memset(buf, 0, sizeof(buf));
+		sprintf(buf, "%d (ms)", m_uSendRtmpTimes);
+		strPlayQuality+= string("发送请求时间:")+string(buf)+"\r\n";
+		memset(buf, 0, sizeof(buf));
+		sprintf(buf, "%d (ms)", m_uTimeToFirstBuffer);
+		strPlayQuality+= string("第一次缓冲时间:")+string(buf)+"\r\n";
+		memset(buf, 0, sizeof(buf));
+		sprintf(buf, "%d (ms)", m_dwTotalBufEmptyTimes);
+		strPlayQuality+= string("再缓冲总时间:")+string(buf)+"\r\n";
 		const char *p = new char [strPlayQuality.length()+1];
 
 		if (p)
@@ -472,6 +517,12 @@ bool CMainDlg::OnRtmpPlayManagerPlayQuality(RtmpPlayQuality &RtmpPlayQuality)
 void CMainDlg::OnShowVideo()
 {
 	string strMsg("Msg:OnShowVideo.");
+
+	SYSTEMTIME time;
+	GetLocalTime(&time);
+	char buf[50] = {0};
+	sprintf(buf, "%d:%d:%d:%d  ", time.wHour, time.wMinute, time.wSecond, time.wMilliseconds);
+	strMsg = string(buf) + strMsg;
 	ShowMsg(strMsg);
 	return;
 }
@@ -547,6 +598,12 @@ CMainDlg::CMainDlg()
 , m_strKey("yun")
 , m_lLastTime(0)
 , m_lTimes(0)
+, m_dwDnsResolveTime(0)
+, m_dwTcpConnectTime(0)
+, m_dwRtmpInitTime(0)
+, m_uSendRtmpTimes(0)
+, m_uTimeToFirstBuffer(0)
+, m_dwTotalBufEmptyTimes(0)
 , m_lPingSum(0)
 , m_pRtmpPlayManager2(NULL)
 , m_strUserID("10000")
@@ -554,31 +611,45 @@ CMainDlg::CMainDlg()
 , m_strFileName("d:\\a.flv")
 , m_bDirectConSvr(false)
 , m_bUseUDP(false)
+, m_iTimes(300)
+, m_iDelay(3)
+, m_hThread(NULL)
+, m_bBreak(false)
 {
+/*	m_dwRtmpInitTime = 0;
+	m_uSendRtmpTimes = 0;
+	m_uTimeToFirstBuffer =0 ;
+	m_dwTotalBufEmptyTimes = 0;*/ 
 }
 
 LRESULT CMainDlg::OnBnClickedButtonStop(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
 {
 	// TODO: 在此添加控件通知处理程序代码
 	char szTime[64] = {0};
-	time_t curTime;
-	time(&curTime);
-	tm *pTime = NULL;
-	pTime = localtime(&curTime);
+	//time_t curTime;
+	//time(&curTime);
+	//tm *pTime = NULL;
+	//pTime = localtime(&curTime);
 
-	if (pTime)
-	{
-		sprintf(szTime,
-			"%d:%d:%d.000 ",
-			pTime->tm_hour,
-			pTime->tm_min,
-			pTime->tm_sec);
-	}
+	//if (pTime)
+	//{
+	//	sprintf(szTime,
+	//		"%d:%d:%d.000 ",
+	//		pTime->tm_hour,
+	//		pTime->tm_min,
+	//		pTime->tm_sec);
+	//}
+	SYSTEMTIME st;
+	GetLocalTime(&st);
+	sprintf(szTime,"%d:%d:%d.%d ",st.wHour,st.wMinute,st.wSecond,st.wMilliseconds);
 	string strMsg = string(szTime) + "ClickStopButton";
 	ShowMsg(strMsg);
 
-	if(m_pRtmpPlayManager)
+	if(m_pRtmpPlayManager){
 		m_pRtmpPlayManager->StopPlay();
+		m_pRtmpPlayManager->Release();
+		m_pRtmpPlayManager = NULL;
+	}
 	//::ShowWindow(GetDlgItem(IDC_STATIC).m_hWnd, SW_HIDE);
 	/*if(m_pRtmpPlayManager2)
 		m_pRtmpPlayManager2->StopPlay();*/
@@ -771,4 +842,40 @@ LRESULT CMainDlg::OnBnClickedButtonSetBufferTime(WORD /*wNotifyCode*/, WORD /*wI
 	}
 
 	return 0;
+}
+
+LRESULT CMainDlg::OnBnClickedButtonTest(WORD /*wNotifyCode*/, WORD /*wID*/, HWND /*hWndCtl*/, BOOL& /*bHandled*/)
+{
+	m_bBreak = !m_bBreak;
+	WaitForSingleObject(m_hThread,INFINITE);
+	CloseHandle(m_hThread);
+	//m_hThread =(HANDLE)_beginthread(TestFun, 0, (void *)this);
+
+	m_hThread = ::CreateThread(NULL,0,TestFun,this,0,0);
+
+	return 0;
+}
+
+DWORD WINAPI CMainDlg::TestFun(LPVOID arg)
+{
+
+	CMainDlg *p = (CMainDlg *)arg;
+	p->DoTestMain();
+	return 1;
+}
+
+void CMainDlg::DoTestMain()
+{
+	wchar_t buf[30]={L'\0'};
+	for (int i = 0; (i< m_iTimes) && m_bBreak;i++)
+	{
+		::PostMessage(GetDlgItem(IDC_BUTTON1).m_hWnd,BM_CLICK,0,0);
+		Sleep(m_iDelay*1000);
+		::PostMessage(GetDlgItem(IDC_BUTTON_STOP).m_hWnd,BM_CLICK,0,0);
+		Sleep(1000);
+		swprintf(buf, L"%d", m_iTimes - i);
+		wstring reTimes = buf;
+		//GetDlgItem(IDC_EDIT_TIMES).SetWindowText(reTimes.c_str());
+		::PostMessage(GetDlgItem(IDC_EDIT_TIMES).m_hWnd,WM_SETTEXT,0,(LPARAM)(reTimes.c_str()));
+	}
 }
