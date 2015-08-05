@@ -90,7 +90,7 @@ public:
 	 * 接口功能：设置是否开启自动调整码率模式
 	 * 调    用：pszCmd { "cmd":"SetAutoCtrlBitrate", "params":{"bAuto":true} }
 	 * 成功返回：ppszRes { "code":0, "data":{} }
-	 * 失败返回：ppszRes { "code":1, "data":{"reason":"no version."} }
+	 * 失败返回：ppszRes { "code":1, "data":{} }
 	 **/
 
 	/**
@@ -98,7 +98,15 @@ public:
 	 * 接口功能：获取本地安装的播放器列表（必须在 StartPublish 之前调用）
 	 * 调    用：pszCmd { "cmd":"GetPlayerList", "params":{} }
 	 * 成功返回：ppszRes { "code":0, "data":{"player":["9158", "guagua"]} }
-	 * 失败返回：ppszRes { "code":1, "data":{"reason":"no version."} }
+	 * 失败返回：ppszRes { "code":1, "data":{} }
+	 **/
+
+	/**
+	 * 接    口：JSON调用统一接口 SelectPlayerName
+	 * 接口功能：选择背景音乐播放器（必须在 StartPublish 之前调用）
+	 * 调    用：pszCmd { "cmd":"SelectPlayerName", "params":{"player":"9158"} }
+	 * 成功返回：ppszRes { "code":0, "data":{} }
+	 * 失败返回：ppszRes { "code":1, "data":{} }
 	 **/
 
 	/**
@@ -109,6 +117,38 @@ public:
 	 * 示    例：pszCmd { "cmd":"xxx", "params":{"x":true, "xx":12, "xxx":"abc"} }
 	 * 示    例：ppszRes { "code":0, "data":{"reason":"abc"} }
 	 * 说    明：code含义 0：success，1：fail
+	 **/
+
+	/**
+	 * 接    口：JSON调用统一接口 GetCamList
+	 * 接口功能：获取摄像头列表（必须在 StartPublish 之前调用）
+	 * 调    用：pszCmd { "cmd":"GetCamList", "params":{} }
+	 * 成功返回：ppszRes { "code":0, "data":{"cameras":["cam1", "cam2"]} }
+	 * 失败返回：ppszRes { "code":1, "data":{} }
+	 **/
+
+	/**
+	 * 接    口：JSON调用统一接口 GetMicList
+	 * 接口功能：获取摄像头列表（必须在 StartPublish 之前调用）
+	 * 调    用：pszCmd { "cmd":"GetMicList", "params":{} }
+	 * 成功返回：ppszRes { "code":0, "data":{"mics":["mic1", "mic2"]} }
+	 * 失败返回：ppszRes { "code":1, "data":{} }
+	 **/
+
+	/**
+	 * 接    口：JSON调用统一接口 SetVBRQuality
+	 * 接口功能：设置VBR视频质量（若使用VBR必须在 SetPublishVideoPara 之前调用）
+	 * 调    用：pszCmd { "cmd":"SetVBRQuality", "params":{"Quality":50} }			Quality范围0-51   1-51数字越小，质量越好。为0表示固定码率模式
+	 * 成功返回：ppszRes { "code":0, "data":{} }
+	 * 失败返回：ppszRes { "code":1, "data":{} }
+	 **/
+
+	/**
+	 * 接    口：JSON调用统一接口 SetBframeCount
+	 * 接口功能：设置B帧（若使用必须在 SetPublishVideoPara 之前调用）
+	 * 调    用：pszCmd { "cmd":"SetBframeCount", "params":{"BframeCount":5} }		BframeCount 范围大于等于0。增大B帧可以提高一点质量，但是会增大延时。
+	 * 成功返回：ppszRes { "code":0, "data":{} }
+	 * 失败返回：ppszRes { "code":1, "data":{} }
 	 **/
 	virtual bool CallInJson(const char* pszCmd, char** ppszRes) = 0;
 
@@ -211,7 +251,7 @@ public:
 	virtual void SetPublishStreamPara(const char *pServer, const char *pApp, const char *pStream) = 0;
 	
 	/*
-	*	接口功能:					设置音量.（可以在发布过程中调用）
+	*	接口功能:					设置设备捕获音量.（可以在发布过程中调用）
 	*	参    数:		
 	*		@uVolum:				音量. 	
 	*		@bMute:					是否静音. 	
