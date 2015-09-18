@@ -1,0 +1,103 @@
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 523 RtmpPlayManager::SetAudioPlayDev: PlayManager set play device right uAudioPlayDevID:0, m_vecAudioOutDevList size:4
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 612 RtmpPlayManager::StartPlay: click startplay, this:708fc8
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 632 RtmpPlayManager::StartPlay: PlayManager play device  uAudioPlayDevID:0, m_vecAudioOutDevList size:4, devname:Default DirectSound Device
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 660 RtmpPlayManager::StartPlay: RtmpPlay:start play, this:708fc8
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1275 RtmpPlayManager::AsynStartPlay: RtmpPlay:want start play, this:708fc8
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1056 RtmpPlayManager::StartSchedule: RtmpPlay:StartSchedule, this:0x708fc8
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 871 RtmpPlayManager::ConnectSvr: Create h264 decoder success.
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 936 RtmpPlayManager::ConnectSvr: before rtmp:con, m_RtmpLib:0X3cd0040, this:708fc8
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 989 RtmpPlayManager::ConnectSvr: =================rtmp://lssplay.aodianyun.com:1935/app?k=70f502d1d15e2970b4466c5721d95c1e&t=0/stream
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:HighQualityService.Connect.Success, m_RtmpLib:0X3cd0040, this:708fc8 
+[2015-09-14-17-55-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Success, m_RtmpLib:0X3cd0040, this:708fc8 
+[2015-09-14-17-55-27] _INFO_ e:\h264\rtmp\rtmp.cpp 897 CRtmp::HandShake: Server Uptime : 1442224472
+[2015-09-14-17-55-27] _INFO_ e:\h264\rtmp\rtmp.cpp 899 CRtmp::HandShake: FMS Version   : 0.0.0.0
+[2015-09-14-17-55-27] _WARNING_ e:\h264\rtmp\rtmp.cpp 916 CRtmp::HandShake: client signature does not match!
+[2015-09-14-17-55-28] _INFO_ e:\h264\rtmp\rtmp.cpp 3623 CRtmp::HandleCtrl: Stream Begin 0
+[2015-09-14-17-55-28] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <connect>
+[2015-09-14-17-55-28] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <createStream>
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:708fc8
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 589 RtmpPlayManager::StopPlay: delete m_pAudioVideoSYN use 0 ms.
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1929 RtmpPlayManager::ThreadProcMain: Play thread exit.this:708fc8
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1304 RtmpPlayManager::AsynStopPlay: AsynStopPlay, this:708fc8
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1310 RtmpPlayManager::AsynStopPlay: delete m_RtmpRecord use 0 ms.
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1320 RtmpPlayManager::AsynStopPlay: delete m_pCollectUserInfo use 0 ms.
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1329 RtmpPlayManager::AsynStopPlay: delete m_pServerSchedule use 0 ms.
+[2015-09-14-17-55-32] _WARNING_ e:\h264\rtmp\rtmp.cpp 412 CRtmp::CloseSocket: CloseSocket()
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Closed, m_RtmpLib:0X3cd0040, this:708fc8 
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2329 RtmpPlayManager::OnRtmpStatus: netconnection close , recon(send message to start schedule), this:708fc8
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2350 RtmpPlayManager::OnRtmpStatus: NetConnection.Connect.Closed,33685901
+[2015-09-14-17-55-32] _FATAL_ e:\h264\rtmp\iobuffer.cpp 84 IOBuffer::ReadFromTCPFd: failed to recv. 10004 (Unknown error)
+[2015-09-14-17-55-32] _FATAL_ e:\h264\rtmp\rtmp.cpp 2140 CRtmp::ReadN: read error
+[2015-09-14-17-55-32] _FATAL_ e:\h264\rtmp\rtmp.cpp 2612 CRtmp::RTMP_ReadPacket: failed to read RTMP packet header
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1337 RtmpPlayManager::AsynStopPlay: delete m_RtmpLib use 0 ms.
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1364 RtmpPlayManager::AsynStopPlay: delete m_queMsg use 0 ms.
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2778 RtmpPlayManager::FormatQualityInfo2JSon: strRet:{
+   "App" : "app",
+   "AvgPing" : 23,
+   "Browser" : "",
+   "ClientIP" : "",
+   "ClientPort" : 0,
+   "CloseNormal" : true,
+   "ConnectTime" : 33681333,
+   "DiscardByteSum" : 0,
+   "MaxPing" : 31,
+   "MinPing" : 0,
+   "RecvAudioByteSum" : 0,
+   "RecvByteSum" : 0,
+   "RecvVideoByteSum" : 0,
+   "SendAudioByteSum" : 0,
+   "SendByteSum" : 0,
+   "SendVideoByteSum" : 0,
+   "ServerIP" : "120.27.46.98",
+   "ServerPort" : 1935,
+   "StartTime" : 0.0,
+   "Status" : "Play",
+   "StopTime" : 1442224532.0,
+   "Stream" : "stream",
+   "UserFlashVersion" : "20150911105200",
+   "UserID" : "10000",
+   "info" : {
+      "AvgAvailPhys" : 625348,
+      "AvgAvalVirtual" : 1962392,
+      "AvgBuffer" : 0,
+      "AvgCPUUsage" : 34,
+      "AvgCurProcessCPU" : 0,
+      "AvgCurProcessMem" : 29016,
+      "AvgCurProcessVirtualMem" : 21286,
+      "AvgDownBandWidth" : 23,
+      "AvgUpBandWidth" : 1,
+      "AvgVideoFPS" : 0,
+      "BufferEmpty" : 0,
+      "BufferFull" : 0,
+      "BufferTime" : 0,
+      "CPUClockSpeed" : 2800,
+      "CPUCores" : 2,
+      "DnsResolveTime" : 31,
+      "Dw60sEmptyTimes" : 0,
+      "Dw60sFluency" : 562.3537833333334,
+      "Dw60sTotalBufEmptyTimes" : -1,
+      "FirstBufferTime" : -1,
+      "Fluency" : 7133.830580262601,
+      "MaxBuffer" : 0,
+      "MinBuffer" : 0,
+      "OSName" : "Microsoft Windows 7__64bit",
+      "PlayMode" : "",
+      "PublishEmpty" : 0,
+      "ReConDetail" : "",
+      "RtmpInitTime" : 47,
+      "ScheduleTime" : 0,
+      "SendRtmpUseTimes" : -33681334,
+      "ShowVideoTime" : 0,
+      "TcpConnectTime" : 31,
+      "TotalBufEmptyTimes" : 0,
+      "TotalPhys" : 3931384,
+      "TotalTimeShowVideo" : 4722,
+      "TotalVirtual" : 2097024
+   },
+   "isForward" : false
+}
+
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:708fc8
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 573 RtmpPlayManager::StopPlay: click stopplay, but m_bHavePlayed false . this:708fc8
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1254 RtmpPlayManager::ClearPlayBuf: Create h264 decoder success.
+[2015-09-14-17-55-32] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 259 RtmpPlayManager::~RtmpPlayManager: m_lCounter:1

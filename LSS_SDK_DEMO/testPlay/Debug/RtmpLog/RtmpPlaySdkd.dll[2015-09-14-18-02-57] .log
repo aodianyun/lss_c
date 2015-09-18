@@ -1,0 +1,557 @@
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 523 RtmpPlayManager::SetAudioPlayDev: PlayManager set play device right uAudioPlayDevID:0, m_vecAudioOutDevList size:4
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 612 RtmpPlayManager::StartPlay: click startplay, this:368fc8
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 632 RtmpPlayManager::StartPlay: PlayManager play device  uAudioPlayDevID:0, m_vecAudioOutDevList size:4, devname:Default DirectSound Device
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 660 RtmpPlayManager::StartPlay: RtmpPlay:start play, this:368fc8
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1275 RtmpPlayManager::AsynStartPlay: RtmpPlay:want start play, this:368fc8
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1056 RtmpPlayManager::StartSchedule: RtmpPlay:StartSchedule, this:0x368fc8
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 871 RtmpPlayManager::ConnectSvr: Create h264 decoder success.
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 936 RtmpPlayManager::ConnectSvr: before rtmp:con, m_RtmpLib:0X4bf0040, this:368fc8
+[2015-09-14-18-03-17] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 989 RtmpPlayManager::ConnectSvr: =================rtmp://lssplay.aodianyun.com:1935/sxjtxkkyoocom?k=70f502d1d15e2970b4466c5721d95c1e&t=0/200000
+[2015-09-14-18-03-18] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:HighQualityService.Connect.Success, m_RtmpLib:0X4bf0040, this:368fc8 
+[2015-09-14-18-03-18] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Success, m_RtmpLib:0X4bf0040, this:368fc8 
+[2015-09-14-18-03-18] _INFO_ e:\h264\rtmp\rtmp.cpp 897 CRtmp::HandShake: Server Uptime : 1442224943
+[2015-09-14-18-03-18] _INFO_ e:\h264\rtmp\rtmp.cpp 899 CRtmp::HandShake: FMS Version   : 0.0.0.0
+[2015-09-14-18-03-18] _WARNING_ e:\h264\rtmp\rtmp.cpp 916 CRtmp::HandShake: client signature does not match!
+[2015-09-14-18-03-18] _INFO_ e:\h264\rtmp\rtmp.cpp 3623 CRtmp::HandleCtrl: Stream Begin 0
+[2015-09-14-18-03-18] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <connect>
+[2015-09-14-18-03-18] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <createStream>
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:368fc8
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 589 RtmpPlayManager::StopPlay: delete m_pAudioVideoSYN use 0 ms.
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1929 RtmpPlayManager::ThreadProcMain: Play thread exit.this:368fc8
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1304 RtmpPlayManager::AsynStopPlay: AsynStopPlay, this:368fc8
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1310 RtmpPlayManager::AsynStopPlay: delete m_RtmpRecord use 0 ms.
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1320 RtmpPlayManager::AsynStopPlay: delete m_pCollectUserInfo use 0 ms.
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1329 RtmpPlayManager::AsynStopPlay: delete m_pServerSchedule use 0 ms.
+[2015-09-14-18-03-25] _WARNING_ e:\h264\rtmp\rtmp.cpp 412 CRtmp::CloseSocket: CloseSocket()
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Closed, m_RtmpLib:0X4bf0040, this:368fc8 
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2329 RtmpPlayManager::OnRtmpStatus: netconnection close , recon(send message to start schedule), this:368fc8
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2350 RtmpPlayManager::OnRtmpStatus: NetConnection.Connect.Closed,34158843
+[2015-09-14-18-03-25] _FATAL_ e:\h264\rtmp\iobuffer.cpp 84 IOBuffer::ReadFromTCPFd: failed to recv. 10004 (Unknown error)
+[2015-09-14-18-03-25] _FATAL_ e:\h264\rtmp\rtmp.cpp 2140 CRtmp::ReadN: read error
+[2015-09-14-18-03-25] _FATAL_ e:\h264\rtmp\rtmp.cpp 2612 CRtmp::RTMP_ReadPacket: failed to read RTMP packet header
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1337 RtmpPlayManager::AsynStopPlay: delete m_RtmpLib use 0 ms.
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1364 RtmpPlayManager::AsynStopPlay: delete m_queMsg use 0 ms.
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2778 RtmpPlayManager::FormatQualityInfo2JSon: strRet:{
+   "App" : "sxjtxkkyoocom",
+   "AvgPing" : 22,
+   "Browser" : "",
+   "ClientIP" : "",
+   "ClientPort" : 0,
+   "CloseNormal" : true,
+   "ConnectTime" : 34152050,
+   "DiscardByteSum" : 0,
+   "MaxPing" : 32,
+   "MinPing" : 0,
+   "RecvAudioByteSum" : 0,
+   "RecvByteSum" : 0,
+   "RecvVideoByteSum" : 0,
+   "SendAudioByteSum" : 0,
+   "SendByteSum" : 0,
+   "SendVideoByteSum" : 0,
+   "ServerIP" : "120.27.46.98",
+   "ServerPort" : 1935,
+   "StartTime" : 0.0,
+   "Status" : "Play",
+   "StopTime" : 1442225005.0,
+   "Stream" : "200000",
+   "UserFlashVersion" : "20150911105200",
+   "UserID" : "10000",
+   "info" : {
+      "AvgAvailPhys" : 617300,
+      "AvgAvalVirtual" : 1962383,
+      "AvgBuffer" : 0,
+      "AvgCPUUsage" : 29,
+      "AvgCurProcessCPU" : 0,
+      "AvgCurProcessMem" : 29086,
+      "AvgCurProcessVirtualMem" : 20792,
+      "AvgDownBandWidth" : 28,
+      "AvgUpBandWidth" : 3,
+      "AvgVideoFPS" : 0,
+      "BufferEmpty" : 0,
+      "BufferFull" : 0,
+      "BufferTime" : 0,
+      "CPUClockSpeed" : 2800,
+      "CPUCores" : 2,
+      "DnsResolveTime" : 905,
+      "Dw60sEmptyTimes" : 0,
+      "Dw60sFluency" : 570.184250,
+      "Dw60sTotalBufEmptyTimes" : -1,
+      "FirstBufferTime" : -1,
+      "Fluency" : 4337.091163026918,
+      "MaxBuffer" : 0,
+      "MinBuffer" : 0,
+      "OSName" : "Microsoft Windows 7__64bit",
+      "PlayMode" : "",
+      "PublishEmpty" : 0,
+      "ReConDetail" : "",
+      "RtmpInitTime" : 47,
+      "ScheduleTime" : 0,
+      "SendRtmpUseTimes" : -34152051,
+      "ShowVideoTime" : 0,
+      "TcpConnectTime" : 46,
+      "TotalBufEmptyTimes" : 0,
+      "TotalPhys" : 3931384,
+      "TotalTimeShowVideo" : 7876,
+      "TotalVirtual" : 2097024
+   },
+   "isForward" : false
+}
+
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:368fc8
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 573 RtmpPlayManager::StopPlay: click stopplay, but m_bHavePlayed false . this:368fc8
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1254 RtmpPlayManager::ClearPlayBuf: Create h264 decoder success.
+[2015-09-14-18-03-25] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 259 RtmpPlayManager::~RtmpPlayManager: m_lCounter:1
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 523 RtmpPlayManager::SetAudioPlayDev: PlayManager set play device right uAudioPlayDevID:0, m_vecAudioOutDevList size:4
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 612 RtmpPlayManager::StartPlay: click startplay, this:368fc8
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 632 RtmpPlayManager::StartPlay: PlayManager play device  uAudioPlayDevID:0, m_vecAudioOutDevList size:4, devname:Default DirectSound Device
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 660 RtmpPlayManager::StartPlay: RtmpPlay:start play, this:368fc8
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1275 RtmpPlayManager::AsynStartPlay: RtmpPlay:want start play, this:368fc8
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1056 RtmpPlayManager::StartSchedule: RtmpPlay:StartSchedule, this:0x368fc8
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 871 RtmpPlayManager::ConnectSvr: Create h264 decoder success.
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 936 RtmpPlayManager::ConnectSvr: before rtmp:con, m_RtmpLib:0X4bf0040, this:368fc8
+[2015-09-14-18-03-26] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 989 RtmpPlayManager::ConnectSvr: =================rtmp://lssplay.aodianyun.com:1935/sxjtxkkyoocom?k=70f502d1d15e2970b4466c5721d95c1e&t=0/200000
+[2015-09-14-18-03-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:HighQualityService.Connect.Success, m_RtmpLib:0X4bf0040, this:368fc8 
+[2015-09-14-18-03-27] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Success, m_RtmpLib:0X4bf0040, this:368fc8 
+[2015-09-14-18-03-27] _INFO_ e:\h264\rtmp\rtmp.cpp 897 CRtmp::HandShake: Server Uptime : 1442224950
+[2015-09-14-18-03-27] _INFO_ e:\h264\rtmp\rtmp.cpp 899 CRtmp::HandShake: FMS Version   : 0.0.0.0
+[2015-09-14-18-03-27] _WARNING_ e:\h264\rtmp\rtmp.cpp 916 CRtmp::HandShake: client signature does not match!
+[2015-09-14-18-03-27] _INFO_ e:\h264\rtmp\rtmp.cpp 3623 CRtmp::HandleCtrl: Stream Begin 0
+[2015-09-14-18-03-27] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <connect>
+[2015-09-14-18-03-27] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <createStream>
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:368fc8
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 589 RtmpPlayManager::StopPlay: delete m_pAudioVideoSYN use 0 ms.
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1929 RtmpPlayManager::ThreadProcMain: Play thread exit.this:368fc8
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1304 RtmpPlayManager::AsynStopPlay: AsynStopPlay, this:368fc8
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1310 RtmpPlayManager::AsynStopPlay: delete m_RtmpRecord use 0 ms.
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1320 RtmpPlayManager::AsynStopPlay: delete m_pCollectUserInfo use 0 ms.
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1329 RtmpPlayManager::AsynStopPlay: delete m_pServerSchedule use 0 ms.
+[2015-09-14-18-03-28] _WARNING_ e:\h264\rtmp\rtmp.cpp 412 CRtmp::CloseSocket: CloseSocket()
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Closed, m_RtmpLib:0X4bf0040, this:368fc8 
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2329 RtmpPlayManager::OnRtmpStatus: netconnection close , recon(send message to start schedule), this:368fc8
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2350 RtmpPlayManager::OnRtmpStatus: NetConnection.Connect.Closed,34162417
+[2015-09-14-18-03-28] _FATAL_ e:\h264\rtmp\iobuffer.cpp 84 IOBuffer::ReadFromTCPFd: failed to recv. 10004 (Unknown error)
+[2015-09-14-18-03-28] _FATAL_ e:\h264\rtmp\rtmp.cpp 2140 CRtmp::ReadN: read error
+[2015-09-14-18-03-28] _FATAL_ e:\h264\rtmp\rtmp.cpp 2612 CRtmp::RTMP_ReadPacket: failed to read RTMP packet header
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1337 RtmpPlayManager::AsynStopPlay: delete m_RtmpLib use 0 ms.
+[2015-09-14-18-03-28] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1364 RtmpPlayManager::AsynStopPlay: delete m_queMsg use 0 ms.
+[2015-09-14-18-03-29] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2778 RtmpPlayManager::FormatQualityInfo2JSon: strRet:{
+   "App" : "sxjtxkkyoocom",
+   "AvgPing" : 0,
+   "Browser" : "",
+   "ClientIP" : "",
+   "ClientPort" : 0,
+   "CloseNormal" : true,
+   "ConnectTime" : 34160942,
+   "DiscardByteSum" : 0,
+   "MaxPing" : 0,
+   "MinPing" : 0,
+   "RecvAudioByteSum" : 0,
+   "RecvByteSum" : 0,
+   "RecvVideoByteSum" : 0,
+   "SendAudioByteSum" : 0,
+   "SendByteSum" : 0,
+   "SendVideoByteSum" : 0,
+   "ServerIP" : "60.214.139.124",
+   "ServerPort" : 1935,
+   "StartTime" : 0.0,
+   "Status" : "Play",
+   "StopTime" : 1442225008.0,
+   "Stream" : "200000",
+   "UserFlashVersion" : "20150911105200",
+   "UserID" : "10000",
+   "info" : {
+      "AvgAvailPhys" : 612762,
+      "AvgAvalVirtual" : 1959492,
+      "AvgBuffer" : 0,
+      "AvgCPUUsage" : 30,
+      "AvgCurProcessCPU" : 5,
+      "AvgCurProcessMem" : 30840,
+      "AvgCurProcessVirtualMem" : 22416,
+      "AvgDownBandWidth" : 14,
+      "AvgUpBandWidth" : 1,
+      "AvgVideoFPS" : 0,
+      "BufferEmpty" : 0,
+      "BufferFull" : 0,
+      "BufferTime" : 0,
+      "CPUClockSpeed" : 2800,
+      "CPUCores" : 2,
+      "DnsResolveTime" : 1061,
+      "Dw60sEmptyTimes" : 0,
+      "Dw60sFluency" : 570.3306166666666,
+      "Dw60sTotalBufEmptyTimes" : -1,
+      "FirstBufferTime" : -1,
+      "Fluency" : 13210.52668213457,
+      "MaxBuffer" : 0,
+      "MinBuffer" : 0,
+      "OSName" : "Microsoft Windows 7__64bit",
+      "PlayMode" : "",
+      "PublishEmpty" : 0,
+      "ReConDetail" : "",
+      "RtmpInitTime" : 32,
+      "ScheduleTime" : 0,
+      "SendRtmpUseTimes" : -34160943,
+      "ShowVideoTime" : 0,
+      "TcpConnectTime" : 15,
+      "TotalBufEmptyTimes" : 0,
+      "TotalPhys" : 3931384,
+      "TotalTimeShowVideo" : 2586,
+      "TotalVirtual" : 2097024
+   },
+   "isForward" : false
+}
+
+[2015-09-14-18-03-29] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:368fc8
+[2015-09-14-18-03-29] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 573 RtmpPlayManager::StopPlay: click stopplay, but m_bHavePlayed false . this:368fc8
+[2015-09-14-18-03-29] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1254 RtmpPlayManager::ClearPlayBuf: Create h264 decoder success.
+[2015-09-14-18-03-29] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 259 RtmpPlayManager::~RtmpPlayManager: m_lCounter:0
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 523 RtmpPlayManager::SetAudioPlayDev: PlayManager set play device right uAudioPlayDevID:0, m_vecAudioOutDevList size:4
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 612 RtmpPlayManager::StartPlay: click startplay, this:36a870
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 632 RtmpPlayManager::StartPlay: PlayManager play device  uAudioPlayDevID:0, m_vecAudioOutDevList size:4, devname:Default DirectSound Device
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 660 RtmpPlayManager::StartPlay: RtmpPlay:start play, this:36a870
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1275 RtmpPlayManager::AsynStartPlay: RtmpPlay:want start play, this:36a870
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1056 RtmpPlayManager::StartSchedule: RtmpPlay:StartSchedule, this:0x36a870
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 871 RtmpPlayManager::ConnectSvr: Create h264 decoder success.
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 936 RtmpPlayManager::ConnectSvr: before rtmp:con, m_RtmpLib:0X5490040, this:36a870
+[2015-09-14-18-03-40] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 989 RtmpPlayManager::ConnectSvr: =================rtmp://lssplay.aodianyun.com:1935/sxjtxkkyoocom?k=70f502d1d15e2970b4466c5721d95c1e&t=0/10061600
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:HighQualityService.Connect.Success, m_RtmpLib:0X5490040, this:36a870 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Success, m_RtmpLib:0X5490040, this:36a870 
+[2015-09-14-18-03-41] _INFO_ e:\h264\rtmp\rtmp.cpp 897 CRtmp::HandShake: Server Uptime : 1442224964
+[2015-09-14-18-03-41] _INFO_ e:\h264\rtmp\rtmp.cpp 899 CRtmp::HandShake: FMS Version   : 0.0.0.0
+[2015-09-14-18-03-41] _WARNING_ e:\h264\rtmp\rtmp.cpp 916 CRtmp::HandShake: client signature does not match!
+[2015-09-14-18-03-41] _INFO_ e:\h264\rtmp\rtmp.cpp 3623 CRtmp::HandleCtrl: Stream Begin 0
+[2015-09-14-18-03-41] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <connect>
+[2015-09-14-18-03-41] _INFO_ e:\h264\rtmp\rtmp.cpp 3023 CRtmp::HandleInvoke: received result for method call <createStream>
+[2015-09-14-18-03-41] _INFO_ e:\h264\rtmp\rtmp.cpp 3623 CRtmp::HandleCtrl: Stream Begin 1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetStream.Play.Reset, m_RtmpLib:0X5490040, this:36a870 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetStream.Play.Start, m_RtmpLib:0X5490040, this:36a870 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:PublishFPS, m_RtmpLib:0X5490040, this:36a870 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:0, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2472 RtmpPlayManager::OnShowVideo: OnShowVideo
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplay.cpp 186 AudioPlay::BuildFilterGraph: Create IID_IGraphBuilder, hr:0, m_pGB:807b08
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplay.cpp 202 AudioPlay::BuildFilterGraph: create IID_IMediaControl , hr:0, m_pMC:807ebc
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplay.cpp 220 AudioPlay::BuildFilterGraph: create IID_ICaptureGraphBuilder2  , hr:0, m_capGraphBuilder:808454
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplay.cpp 235 AudioPlay::BuildFilterGraph: set filter graph , hr:0, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplay.cpp 324 AudioPlay::ConnectFilters: Create Audio out device  suc, hr:0, dev name:Default DirectSound Device
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 188 AudioPlayPin::GetMediaType: format cbsize,:52685, avgbytepersec:176400, blockalign:4,					   channels:2, samplespersec:44100, bitspersample:16, formattag:1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 188 AudioPlayPin::GetMediaType: format cbsize,:52685, avgbytepersec:176400, blockalign:4,					   channels:2, samplespersec:44100, bitspersample:16, formattag:1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 188 AudioPlayPin::GetMediaType: format cbsize,:52685, avgbytepersec:176400, blockalign:4,					   channels:2, samplespersec:44100, bitspersample:16, formattag:1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 188 AudioPlayPin::GetMediaType: format cbsize,:52685, avgbytepersec:176400, blockalign:4,					   channels:2, samplespersec:44100, bitspersample:16, formattag:1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 188 AudioPlayPin::GetMediaType: format cbsize,:52685, avgbytepersec:176400, blockalign:4,					   channels:2, samplespersec:44100, bitspersample:16, formattag:1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 188 AudioPlayPin::GetMediaType: format cbsize,:52685, avgbytepersec:176400, blockalign:4,					   channels:2, samplespersec:44100, bitspersample:16, formattag:1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 188 AudioPlayPin::GetMediaType: format cbsize,:52685, avgbytepersec:176400, blockalign:4,					   channels:2, samplespersec:44100, bitspersample:16, formattag:1
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 137 AudioPlayPin::CheckMediaType: check find right format
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 119 AudioPlayPin::DecideBufferSize: DecideBufferSize
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 213 AudioPlayPin::Active: active
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:335, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:395, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:120, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175412, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:236, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:395, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:425, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:485, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:210, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175430, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:164, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:485, 
+[2015-09-14-18-03-41] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:545, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:575, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:300, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175446, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:90, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:575, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:635, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:665, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:390, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175501, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:55, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:665, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:725, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:755, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:510, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175518, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-48, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:785, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:815, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:844, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:599, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175539, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-116, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:874, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:904, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:934, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:994, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:719, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175558, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-217, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:994, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1054, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1084, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:809, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175601, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-264, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1084, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1144, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1174, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:899, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175619, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-336, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1174, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1234, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1264, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1019, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175640, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-435, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1294, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1324, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1354, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1109, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175659, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-506, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1384, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1414, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1474, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1504, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1229, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175688, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-597, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1504, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1564, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1594, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1319, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175742, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-633, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1594, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1654, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1684, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1409, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175863, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-602, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1684, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1744, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1774, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1499, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34175928, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-627, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1774, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1834, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1864, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1619, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34176041, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-634, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1894, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1924, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:1984, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1709, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34176170, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-595, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:1984, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2014, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2074, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2104, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1829, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34176299, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-586, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:2104, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2163, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2193, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:1918, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34176360, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-614, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:2193, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2253, 
+[2015-09-14-18-03-42] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2283, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:2008, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34176453, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-611, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:2283, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2343, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2373, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:2128, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34176531, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-653, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:2403, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2433, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2493, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 314 AudioVideoSYN::RevVideoData: revvideodata: org video timestample:2218, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 315 AudioVideoSYN::RevVideoData: 						  m_dwAVSYNTimeOffset:34175056. 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 316 AudioVideoSYN::RevVideoData: 						 dwCurTick:34176648, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 317 AudioVideoSYN::RevVideoData: 						 m_dwAVShouldDelayTimeOffset:275, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 318 AudioVideoSYN::RevVideoData: 						 m_dwMaxLateTime:275, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 319 AudioVideoSYN::RevVideoData: 						 off:-626, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 320 AudioVideoSYN::RevVideoData: 						 m_dwTimeOffToReduce:0, . 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 357 AudioVideoSYN::RevVideoData: test: intoqueue video timestample m_dwLastIntoQueueVideoTimeStample:2493, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2523, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2583, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\audiovideosyn.cpp 516 AudioVideoSYN::RevAudioData: test: intoqueue audeo timestample m_dwLastIntoQueueAudioTimeStample:2613, 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:36a870
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\audioplay\audioplay\audioplaypin.cpp 237 AudioPlayPin::Inactive: inactive
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 589 RtmpPlayManager::StopPlay: delete m_pAudioVideoSYN use 32 ms.
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1929 RtmpPlayManager::ThreadProcMain: Play thread exit.this:36a870
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1304 RtmpPlayManager::AsynStopPlay: AsynStopPlay, this:36a870
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1310 RtmpPlayManager::AsynStopPlay: delete m_RtmpRecord use 0 ms.
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1320 RtmpPlayManager::AsynStopPlay: delete m_pCollectUserInfo use 15 ms.
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1329 RtmpPlayManager::AsynStopPlay: delete m_pServerSchedule use 0 ms.
+[2015-09-14-18-03-43] _WARNING_ e:\h264\rtmp\rtmp.cpp 412 CRtmp::CloseSocket: CloseSocket()
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2305 RtmpPlayManager::OnRtmpStatus: OnRtmpStatus:NetConnection.Connect.Closed, m_RtmpLib:0X5490040, this:36a870 
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2329 RtmpPlayManager::OnRtmpStatus: netconnection close , recon(send message to start schedule), this:36a870
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2350 RtmpPlayManager::OnRtmpStatus: NetConnection.Connect.Closed,34176790
+[2015-09-14-18-03-43] _FATAL_ e:\h264\rtmp\iobuffer.cpp 84 IOBuffer::ReadFromTCPFd: failed to recv. 10004 (Unknown error)
+[2015-09-14-18-03-43] _FATAL_ e:\h264\rtmp\rtmp.cpp 2140 CRtmp::ReadN: read error
+[2015-09-14-18-03-43] _FATAL_ e:\h264\rtmp\rtmp.cpp 2612 CRtmp::RTMP_ReadPacket: failed to read RTMP packet header
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1337 RtmpPlayManager::AsynStopPlay: delete m_RtmpLib use 0 ms.
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1364 RtmpPlayManager::AsynStopPlay: delete m_queMsg use 0 ms.
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 2778 RtmpPlayManager::FormatQualityInfo2JSon: strRet:{
+   "App" : "sxjtxkkyoocom",
+   "AvgPing" : 10,
+   "Browser" : "",
+   "ClientIP" : "",
+   "ClientPort" : 0,
+   "CloseNormal" : true,
+   "ConnectTime" : 34174733,
+   "DiscardByteSum" : 0,
+   "MaxPing" : 31,
+   "MinPing" : 0,
+   "RecvAudioByteSum" : 0,
+   "RecvByteSum" : 0,
+   "RecvVideoByteSum" : 0,
+   "SendAudioByteSum" : 13123,
+   "SendByteSum" : 39785,
+   "SendVideoByteSum" : 26662,
+   "ServerIP" : "60.214.139.124",
+   "ServerPort" : 1935,
+   "StartTime" : 0.0,
+   "Status" : "Play",
+   "StopTime" : 1442225023.0,
+   "Stream" : "10061600",
+   "UserFlashVersion" : "20150911105200",
+   "UserID" : "10000",
+   "info" : {
+      "AvgAvailPhys" : 623346,
+      "AvgAvalVirtual" : 1944390,
+      "AvgBuffer" : 659,
+      "AvgCPUUsage" : 39,
+      "AvgCurProcessCPU" : 0,
+      "AvgCurProcessMem" : 33658,
+      "AvgCurProcessVirtualMem" : 25190,
+      "AvgDownBandWidth" : 30,
+      "AvgUpBandWidth" : 4,
+      "AvgVideoFPS" : 7,
+      "BufferEmpty" : 0,
+      "BufferFull" : 0,
+      "BufferTime" : 989,
+      "CPUClockSpeed" : 2800,
+      "CPUCores" : 2,
+      "DnsResolveTime" : 999,
+      "Dw60sEmptyTimes" : 0,
+      "Dw60sFluency" : 0.9785166666666667,
+      "Dw60sTotalBufEmptyTimes" : -1,
+      "FirstBufferTime" : 16,
+      "Fluency" : 0.5840051596259271,
+      "MaxBuffer" : 989,
+      "MinBuffer" : 0,
+      "OSName" : "Microsoft Windows 7__64bit",
+      "PlayMode" : "",
+      "PublishEmpty" : 0,
+      "ReConDetail" : "",
+      "RtmpInitTime" : 31,
+      "ScheduleTime" : 0,
+      "SendRtmpUseTimes" : 213,
+      "ShowVideoTime" : 0,
+      "TcpConnectTime" : 31,
+      "TotalBufEmptyTimes" : 0,
+      "TotalPhys" : 3931384,
+      "TotalTimeShowVideo" : 3101,
+      "TotalVirtual" : 2097024
+   },
+   "isForward" : false
+}
+
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 566 RtmpPlayManager::StopPlay: click stopplay, this:36a870
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 573 RtmpPlayManager::StopPlay: click stopplay, but m_bHavePlayed false . this:36a870
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 1254 RtmpPlayManager::ClearPlayBuf: Create h264 decoder success.
+[2015-09-14-18-03-43] _INFO_ e:\rtmp\windows\rtmpwindows\rtmpplaymanager\rtmpplaymanager.cpp 259 RtmpPlayManager::~RtmpPlayManager: m_lCounter:0

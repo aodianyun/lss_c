@@ -1,0 +1,241 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\newProject.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\newProject.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于 newProject"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "newProject Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2015",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_NEWPROJECT_DIALOG DIALOGEX 0, 0, 479, 323
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "newProject"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Start",IDC_BUTTON1,38,289,45,19
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,9,6,162,129
+    COMBOBOX        IDC_COMBO_VDOUTDEV,59,209,103,40,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SLIDER_OUTVOLUM,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,55,222,82,11
+    PUSHBUTTON      "Mute",IDC_BUTTON_BMUTE,138,222,25,11
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,98,289,45,19
+    EDITTEXT        IDC_EDIT_SERVER,59,159,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SITE,59,173,30,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_STAGE,131,173,38,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PLAYNETINFO,210,6,99,76,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    LISTBOX         IDC_LIST_MSG,210,189,249,113,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "COPY",IDC_BUTTON_COPYMSG,422,175,36,11
+    EDITTEXT        IDC_EDIT_PLAYPCSTATUS,210,85,101,76,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_AVINFO,314,6,115,75,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "改变视频大小",IDC_BUTTON_CHANGE_SIZE,58,237,45,11
+    EDITTEXT        IDC_EDIT_PLAYQUALITY,315,86,113,75,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_USERID,59,144,30,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "录制",IDC_BUTTON_ENABLE_RECORD,117,237,45,11
+    EDITTEXT        IDC_EDIT_KEY,131,143,39,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SLIDER_ShowSpectrum,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,55,195,110,11
+    EDITTEXT        IDC_EDIT_dwDatalenOffset,9,266,39,12,ES_AUTOHSCROLL
+    LTEXT           "加速后的缓冲时间",IDC_STATIC,10,252,45,8
+    LTEXT           "超过此时间加速",IDC_STATIC,60,252,45,8
+    LTEXT           "检测时间",IDC_STATIC,112,252,45,8
+    EDITTEXT        IDC_EDIT_dwMaxTimestampleInqueue,59,266,39,12,
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_dwTimeCheckSynbuf,113,266,39,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "设置缓冲",IDC_BUTTON_SET_BUFFER_TIME,153,266,45,11
+    LTEXT           "用户ID（可选）",IDC_STATIC,9,146,49,8
+    LTEXT           "连接令牌",IDC_STATIC,103,145,26,8
+    LTEXT           "调度地址",IDC_STATIC,9,160,29,8
+    LTEXT           "app",IDC_STATIC,9,175,11,8
+    LTEXT           "stream",IDC_STATIC,103,175,26,8
+    LTEXT           "频谱显示",IDC_STATIC,9,196,29,8
+    LTEXT           "音频输出设备",IDC_STATIC,9,210,45,8
+    LTEXT           "音量",IDC_STATIC,9,223,29,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "newProject.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "newProject.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "翻译", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_NEWPROJECT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 472
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 316
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 newProject(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\newProject.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

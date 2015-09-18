@@ -1,0 +1,276 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\testPublish.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\testPublish.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 testPublish"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "testPublish 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2015",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_TESTPUBLISH_DIALOG DIALOGEX 0, 0, 612, 389
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "testPublish"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,225,125,51,32
+    COMBOBOX        IDC_COMBO_VIDEO,17,212,119,57,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_AUDIO,165,212,119,59,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "视频设备",IDC_STATIC,19,203,43,8
+    LTEXT           "音频设备",IDC_STATIC,166,203,38,8
+    EDITTEXT        IDC_EDIT_SERVER,353,15,118,13,ES_AUTOHSCROLL
+    LTEXT           "调度地址",IDC_STATIC,312,17,29,8
+    EDITTEXT        IDC_EDIT_APP,336,42,40,13,ES_AUTOHSCROLL
+    LTEXT           "app",IDC_STATIC,314,45,19,8
+    EDITTEXT        IDC_EDIT_STAGEID,409,41,40,13,ES_AUTOHSCROLL
+    LTEXT           "stream",IDC_STATIC,381,43,27,8
+    GROUPBOX        "",IDC_STATIC,297,6,273,58
+    LTEXT           "视频参数",IDC_STATIC,16,230,38,13
+    LTEXT           "音频参数",IDC_STATIC,166,232,38,11
+    LTEXT           "宽",IDC_STATIC,42,244,16,13
+    EDITTEXT        IDC_EDIT_VIDEOWIDTH,56,241,40,13,ES_AUTOHSCROLL
+    LTEXT           "高",IDC_STATIC,42,258,16,13
+    EDITTEXT        IDC_EDIT_VIDEOHEIGHT,56,256,40,13,ES_AUTOHSCROLL
+    LTEXT           "帧率",IDC_STATIC,35,274,16,13
+    EDITTEXT        IDC_EDIT_VIDEOFRAMERATE,56,272,40,13,ES_AUTOHSCROLL
+    LTEXT           "码率",IDC_STATIC,35,288,16,13
+    EDITTEXT        IDC_EDIT_VIDEOBITRATE,56,286,40,13,ES_AUTOHSCROLL
+    LTEXT           "采样率",IDC_STATIC,170,246,25,13
+    EDITTEXT        IDC_EDIT_SAMPLERATE,201,244,40,13,ES_AUTOHSCROLL
+    LTEXT           "通道数",IDC_STATIC,171,263,28,13
+    EDITTEXT        IDC_EDIT_CHANNELS,201,260,40,13,ES_AUTOHSCROLL
+    LTEXT           "采样精度",IDC_STATIC,164,278,37,13
+    EDITTEXT        IDC_EDIT_BITPERSAMPLE,201,276,40,13,ES_AUTOHSCROLL
+    LTEXT           "码率",IDC_STATIC,177,291,16,13
+    EDITTEXT        IDC_EDIT_AUDIOBITRATE,202,290,40,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Start",IDC_BUTTON_START,225,85,51,31
+    GROUPBOX        "",IDC_STATIC,7,195,285,127
+    GROUPBOX        "",IDC_STATIC,217,8,76,151
+    PUSHBUTTON      "mute",IDC_BUTTON1,239,39,19,13
+    CONTROL         "",IDC_SLIDER_VOLUM,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,218,23,73,14
+    CONTROL         "",IDC_STATIC_DISPLAY_PUBLISH,"Static",SS_BLACKFRAME,7,8,
+                    204,146
+    PUSHBUTTON      "Stereo",IDC_BUTTON_STEREO,221,62,25,13
+    PUSHBUTTON      "MIC",IDC_BUTTON_MIC,254,62,25,13
+    EDITTEXT        IDC_EDIT_NETINFO,297,69,127,140,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN
+    LISTBOX         IDC_LIST_MSG,297,214,274,157,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "COPY",IDC_BUTTON_COPYMSG,575,211,22,13
+    EDITTEXT        IDC_EDIT_PCSTATUS,446,70,125,141,ES_MULTILINE | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "改变视频大小",IDC_BUTTON_CHANGE_SIZE,84,173,49,13
+    LTEXT           "用户ID（可选）",IDC_STATIC,457,45,56,8
+    EDITTEXT        IDC_EDIT_USERID,518,41,40,13,ES_AUTOHSCROLL
+    LTEXT           "连接令牌",IDC_STATIC,479,19,30,8
+    EDITTEXT        IDC_EDIT_KEY,518,15,40,13,ES_AUTOHSCROLL
+    LTEXT           "关键帧间隔",IDC_STATIC,14,303,43,8
+    EDITTEXT        IDC_EDIT_VIDEOKEYFRAMEINTERVAL,56,300,40,13,
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "是否显示音频频谱",IDC_BUTTON_SHOWSPM,8,173,70,13
+    CONTROL         "",IDC_SLIDER_SHOWSPECTRUM,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,137,164,50,12
+    CONTROL         "自动码率",IDC_CHECK_AUTOCTRLBITRATE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,142,175,45,9
+    LTEXT           "B帧",IDC_STATIC_BFRAME,105,287,16,13
+    EDITTEXT        IDC_EDIT_BFRAME,119,284,40,13,ES_AUTOHSCROLL
+    LTEXT           "质量",IDC_STATIC_QUALITY,105,302,16,13
+    EDITTEXT        IDC_EDIT_QUALITY,119,298,40,13,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_THIRD_PART_PLAYER,17,341,119,30,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "第三方播放器",IDC_STATIC,9,328,69,8
+    PUSHBUTTON      "捕获",IDC_BUTTON2,149,340,50,13
+    PUSHBUTTON      "重启进程",IDC_BUTTON_ISRESTART_PROCESS,209,340,50,13
+    CONTROL         "",IDC_SLIDER_OTHERPLAYER,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,59,358,69,10
+    PUSHBUTTON      "MUTE",IDC_BUTTON_OTHERPLAYER_MUTE,149,358,50,13
+    PUSHBUTTON      "录制",IDC_BUTTON_ENABLERECORD,209,358,50,13
+    GROUPBOX        "",IDC_STATIC,7,320,285,54
+    LTEXT           "播放器音量",IDC_STATIC,15,358,35,8
+    LTEXT           "",IDC_STATIC,9,325,277,47
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "testPublish Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "testPublish"
+            VALUE "LegalCopyright", "版权所有 (C) 2015"
+            VALUE "OriginalFilename", "testPublish.EXE"
+            VALUE "ProductName", "testPublish 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TESTPUBLISH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 605
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 383
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 testPublish(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\testPublish.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
