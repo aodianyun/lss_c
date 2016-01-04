@@ -467,7 +467,7 @@ void CTestPublishDlg::Init()
 void CTestPublishDlg::SetDefaultPara()
 {
 	//m_strScheduleSvr = "rtmp.aodianyun.com:1936";
-	m_strScheduleSvr = "rtmp://rtmp.aodianyun.com:1935";
+	m_strScheduleSvr = "rtmp://lsspublish.aodianyun.com:1935";
 	m_strPublishRoomInfo = "app";
 	m_strPublishStageInfo = "stream";
 	m_strUserID = "10000";
