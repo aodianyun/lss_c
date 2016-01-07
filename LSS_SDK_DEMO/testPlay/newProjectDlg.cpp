@@ -541,7 +541,7 @@ string CnewProjectDlg::GetSdkVersion()
 		m_pRtmpPlayManager->CallInJson(strCmd.c_str(), &pszRes);
 	}
 
-	if (reader.parse(string(pszRes), resRoot))
+	if (reader.parse(pszRes, resRoot))
 	{
 		int iCode = resRoot["code"].asInt();
 
